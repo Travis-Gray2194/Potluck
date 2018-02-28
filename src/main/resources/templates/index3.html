@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="js/indexjs.js"></script>
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+<div th:fragment="navbar">
+<div id='background'></div>
+<div class='navbar navbar-fixed-top'>
+    <nav class='navbar-inner header'>
+        <div class='container'>
+            <div class='brand'>
+                Potluck <i class="fa fa-cloud" style="text-shadow: 1px 1px white, -1px -1px #666;"></i>
+                Account <i th:fragment="currentuser" class="fa fa-cloud" style="text-shadow: 1px 1px white, -1px -1px #666;"><span th:text ="${#authentication.getName()}"></span></i>
+            </div>
+            <ul class='nav pull-right'>
+                <li>
+                    <a class='nav-link' th:href="@{/add}">
+                        Add Item
+                    </a>
+                </li>
+                <li>
+                    <a class='nav-link' th:href="@{/list}">
+                        See all Items
+                    </a>
+                </li>
+                <li>
+                    <a class='nav-link' th:href="@{/login}">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a class='nav-link' th:href="@{/register}">
+                        Register
+                    </a>
+                </li>
+                <li>
+                    <a class='nav-link' th:href="@{/search}">
+                        Search
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+</div>
+    <section id="home" class="sec-main">
+        <h1 class="main-heading">Where Potlucks happen.</h1>
+    </section>
+
+    <section id="about" class="sec-about">
+        <div class="container">
+            <h1>About Potluck</h1>
+
+            <hr />
+
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <p>Welcome to Potluck this Spring Boot Web App was crafted with HTML5, CSS3 and JavaScript or jQuery. Other languages include SQL, JPA and Hibernate. You can checkout the code
+                        <a href="https://github.com/Travis-Gray2194/Potluck">Here</a> If you want to see more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="testimonials" class="sec-testimonials">
+    <div class="container">
+        <h1>Potluck User's</h1>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-sm-4">
+                <p class="text-center">"Potluck saved me hours from having to update potluck items during my Sister's Bridal Shower. It was pleasure to use Potluck and I'm sure I will use it again."</p>
+
+                <p class="text-right">&mdash; Marc Andressen</p>
+            </div>
+
+            <div class="col-sm-4">
+                <p class="text-center">"Potluck proved to be ease to use by my Grandmother she immediately fell in love with the forms to add items!"</p>
+
+                <p class="text-right">&mdash; Emily Cooper</p>
+            </div>
+
+            <div class="col-sm-4">
+                <p class="text-center">"I have worked with several Potluck apps before and it always seemed like a pain—hard to use. I needed something that I could email my friends I found the solution. Thank you Potluck!"</p>
+
+                <p class="text-right">&mdash; Scott Grubber</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="services" class="sec-services">
+        <div class="container">
+            <h1>Potluck Services</h1>
+
+            <hr />
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <i class="fa fa-4x fa-paint-brush"></i>
+
+                    <h2 class="h3">Beautiful Registraion Pages</h2>
+
+                    <p>At Potluck we believe every potluck must be unique and tailored to suit all your food needs and requirements.</p>
+                </div>
+
+                <div class="col-sm-4">
+                    <i class="fa fa-4x fa-code"></i>
+
+                    <h2 class="h3">Clean Code</h2>
+
+                    <p>All websites are written in valid and clean HTML5 / CSS3 &amp; JavaScript (jQuery).</p>
+                </div>
+
+                <div class="col-sm-4">
+                    <i class="fa fa-4x fa-tablet"></i>
+
+                    <h2 class="h3">Always Responsive</h2>
+
+                    <p>All websites are responsive. They will look great on desktop, tablets and mobile phones too.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="folio" class="sec-folio">
+        <div class="container">
+            <h1>Previous Potlucks</h1>
+
+            <hr />
+
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="center-block" src="https://source.unsplash.com/Oog0wehKxYs/450x450" alt="By Håkon Sataøen" />
+                </div>
+
+                <div class="col-md-4">
+                    <img class="center-block" src="https://source.unsplash.com/EfpOiZvPbT4/450x450" alt="By Samuel Zeller" />
+                </div>
+
+                <div class="col-md-4">
+                    <img class="center-block" src="https://source.unsplash.com/2aoVQXwLf3g/450x450" alt="By Scott Webb" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="center-block" src="https://source.unsplash.com/o2KD7JtqTlk/450x450" alt="By Has Bonk" />
+                </div>
+
+                <div class="col-md-4">
+                    <img class="center-block" src="https://source.unsplash.com/TV2ET43jK0w/450x450" alt="By Scott Webb" />
+                </div>
+
+                <div class="col-md-4">
+                    <img class="center-block" src="https://source.unsplash.com/lZ2LB1s_z7s/450x450" alt="By Daniel Lozano Valdés" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="center-block" src="https://source.unsplash.com/o4qL4FuwN6I/450x450" alt="By Anthony DELANOIX" />
+                </div>
+
+                <div class="col-md-4">
+                    <img class="center-block" src="https://source.unsplash.com/ej7RYC0ED_c/450x450" alt="By Patrick Pilz" />
+                </div>
+
+                <div class="col-md-4">
+                    <img class="center-block" src="https://source.unsplash.com/0G1r-Cg0zS8/450x450" alt="By Vita Vilcina" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="sec-contact">
+        <div class="container">
+            <h1>Upcoming Potluck? Tells us more</h1>
+
+            <hr />
+
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <form class="center-block" action="#" method="post">
+                        <div class="form-group">
+                            <label class="sr-only" for="inputName">Full name</label>
+
+                            <input id="inputName" class="form-control" type="text" placeholder="Adam Smith" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputMail" class="sr-only">Email Address</label>
+
+                            <input id="inputMail" class="form-control" type="email" placeholder="adam.smith@mail.com" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputMessage" class="sr-only">Your Message</label>
+
+                            <textarea id="inputMessage" class="form-control" name="message" cols="30" rows="8" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-default center-block" type="submit" value="Hire me">Try Potluck!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <ul class="soc-media-ul">
+                <li>
+                    <a href="https://twitter.com/AlexDevero" class="fa fa-twitter" target="_blank"></a>
+                </li>
+
+                <li>
+                    <a href="https://plus.google.com/u/0/+AlexDevero" class="fa fa-google-plus" target="_blank"></a>
+                </li>
+
+                <li>
+                    <a href="https://cz.linkedin.com/pub/alex-devero/38/262/70/" class="fa fa-linkedin" target="_blank"></a>
+                </li>
+
+                <li>
+                    <a href="https://www.behance.net/d3v3r0" class="fa fa-behance" target="_blank"></a>
+                </li>
+
+                <li>
+                    <a href="mailto:example@mail.com" class="fa fa-envelope"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

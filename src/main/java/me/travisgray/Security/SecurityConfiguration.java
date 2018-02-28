@@ -81,6 +81,25 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new SSUserDetailsService(userRepository);
     }
 
+    //Better readability to organize public routes
+    private static final String[] PUBLIC_MATCHERS = {
+            "/",
+            "/h2-console/**",
+            "/register",
+            "/detail/**",
+            "/update/**",
+            "/delete/**",
+            "/add",
+            "/list",
+            "/search",
+            "/css/**",
+            "/templates/**",
+            "/js/**",
+            "/static/**",
+            "/addtopledge/**",
+            "/addproducttoshoppingcart/**"
+    };
+
 //    HttpSecurity: tells us which routes people are allowed to acesses includes methods to restict or alllow access
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -89,7 +108,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
 //                .antmatchers: if you have a route you want to block off
 //                .permitall: dont need access pages everyone one can acees this route example:register
-                .antMatchers("/","/h2-console/**","/register").permitAll()
+                .antMatchers(PUBLIC_MATCHERS).permitAll()
 
 
 
